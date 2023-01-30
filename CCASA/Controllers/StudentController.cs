@@ -46,5 +46,9 @@ namespace CCASA.Controllers
         {
             return View("StudentDashboard");
         }
-    }
+		public ViewResult Settings()
+		{
+			return View("StudentSettings");
+		}
+	}
 }

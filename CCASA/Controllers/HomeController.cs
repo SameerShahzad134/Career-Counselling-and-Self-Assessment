@@ -81,6 +81,13 @@ namespace CCASA.Controllers
 			}
 
 		}
+		public IActionResult Remove()
+		{
+            HttpContext.Response.Cookies.Delete("email" );
+            HttpContext.Response.Cookies.Delete("password");
+			return RedirectToAction("Index");
+        }
+
 
 	}
 }

@@ -82,3 +82,6 @@ C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\V
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Home\error.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounsellorDashboard.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounsellorHome.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounselorSettings.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\StudentSettings.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
