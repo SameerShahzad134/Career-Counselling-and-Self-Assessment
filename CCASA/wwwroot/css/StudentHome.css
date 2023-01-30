@@ -1,0 +1,98 @@
+﻿body {
+    background-color: rgb(244, 242, 237);
+    font-family: montserrat;
+}
+
+.container {
+    color: azure;
+}
+
+.navbar-brand {
+    font-family: 'Quicksand', sans-serif;
+    color: azure;
+    font-size: 17px;
+}
+
+    .navbar-brand:hover {
+        font-family: 'Quicksand', sans-serif;
+        color: azure;
+    }
+
+.text-waring {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(23, 23, 54);
+}
+
+.setting {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.nav-link {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 5px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+    .nav-link:hover {
+        background-color: rgb(61, 61, 134);
+        border-radius: 20px;
+        color: aliceblue
+    }
+
+.cart-image {
+    width: 40px;
+    height: 30px;
+}
+
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+    .carousel-caption h5 {
+        font-size: 45px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+    }
+
+    .carousel-caption p {
+        width: 60%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+.carousel-inner::before {
+    content: '';
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+
+.carousel-control-prev-icon {
+    color: rgb(236, 209, 132);
+}
+
+.row {
+    padding-top: 70px;
+}

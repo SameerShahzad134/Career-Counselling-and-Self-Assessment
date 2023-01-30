@@ -1,0 +1,61 @@
+﻿body {
+    background-image: url("/lib/image1.jpg");
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    margin: 20px;
+    padding: 20px 40px;
+    border: 2px solid lightgray;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: rgb(23, 23, 54);
+    color: white;
+    border-color: lightgray;
+}
+
+label:hover {
+    background-color: rgb(23, 23, 54);
+    color: white;
+    border-color: lightgray;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(23, 23, 54);
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+    input[type="submit"]:hover {
+        background-color: rgb(23, 23, 54);
+        cursor: pointer;
+    }
