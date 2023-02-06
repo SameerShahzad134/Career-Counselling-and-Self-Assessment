@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿@using CCASA.Models
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -21,8 +22,8 @@
                                 <div class="user-avatar">
                                     <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
                                 </div>
-                                <h5 class="user-name">Yuki Hayashi</h5>
-                                <h6 class="user-email">yuki@Maxwell.com</h6>
+                                <h5 class="user-name">@Model.Name</h5>
+                                <h6 class="user-email">@Model.Email</h6>
                             </div>
                             <div class="about">
                                 <h5 class="mb-2 text-primary">About</h5>
@@ -42,27 +43,21 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="fullName">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                                    <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter full name">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="eMail">Email</label>
-                                    <input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+                                    <label for="religon">Religon</label>
+                                    <input type="text" class="form-control" id="religion" name="religion" placeholder="Enter Religion">
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Enter new Password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter new Password">
                                 </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="Qualification">Qualification</label>
-                                    <input type="text" class="form-control" id="qualification" placeholder="Qualification">
-                                </div>
-                            </div>
+                            </div> 
                         </div>
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -71,33 +66,22 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="Gender">Gender</label>
-                                    <input type="text" class="form-control" id="Street" placeholder="Enter Gender">
+                                    <input type="text" class="form-control" id="Street" name="gender" placeholder="Enter Gender">
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="religon">Religon</label>
-                                    <input type="text" class="form-control" id="religion" placeholder="Enter Religion">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="Message">Message</label>
-                                    <input type="text" class="form-control" id="message" placeholder="Enter Message">
-                                </div>
-                            </div>
+                            
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="bloodGroup">Blood Group</label>
-                                    <input type="text" class="form-control" id="bloodGroup" placeholder="Enter Blood Group">
+                                    <input type="text" class="form-control" id="bloodGroup" name="blood" placeholder="Enter Blood Group">
                                 </div>
                             </div>
                         </div>
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-right">
-                                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
-                                    <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+                                    <button type="button" id="submit" name="submit" class="btn btn-secondary" onclick="location.href='@Url.Action("CounsellorHome", "Counsellor")'">Cancel</button>
+                                    <button type="button" id="submit" name="submit" class="btn btn-primary" onclick="location.href='@Url.Action("updateDetails", "Counsellor")'">Update</button>
                                 </div>
                             </div>
                         </div>

@@ -10,6 +10,8 @@ namespace CCASA.Controllers
 {
     public class StudentController : Controller
     {
+        Class context = new Class();
+        Student st = new Student();
         public ViewResult Index()
         {
             return View("LoginSignUp");
@@ -21,7 +23,7 @@ namespace CCASA.Controllers
             {
                 HttpContext.Response.Cookies.Append("email", email);
                 HttpContext.Response.Cookies.Append("password", pswd);
-                return View("StudentHome");
+                return View("StudentDetails");
 			}
             else
             {
@@ -32,9 +34,7 @@ namespace CCASA.Controllers
         }
         [HttpPost]
         public async Task<bool> AddNewStudent(string txt, string email, string pswd)
-        {
-            Class context = new Class();
-            Student st = new Student();
+        { 
             st.Name = txt;
             st.Email = email;
             st.Password = pswd;
@@ -46,9 +46,57 @@ namespace CCASA.Controllers
         {
             return View("StudentDashboard");
         }
-		public ViewResult Settings()
+        public ViewResult Home()
+        {
+            return View("StudentHome");
+        }
+        public ViewResult Settings()
 		{
-			return View("StudentSettings");
+            StudentRepository studentRepository = new StudentRepository(context);
+            st.Email = HttpContext.Request.Cookies["email"];
+            st.Name = studentRepository.GetStudentName(st.Email);
+            return View("StudentSettings",st);
 		}
-	}
+        public IActionResult Remove()
+        {
+            HttpContext.Response.Cookies.Delete("email");
+            HttpContext.Response.Cookies.Delete("password");
+            return RedirectToAction("Index","Home");
+        }
+        public async Task<ViewResult> addDetails(string religion, string blood,string gender)
+        {
+            st.Email = HttpContext.Request.Cookies["email"];
+            st.Password = HttpContext.Request.Cookies["password"];
+            st.Religion = religion;
+            st.BloodGroup = blood;
+            st.Gender = gender;
+            StudentRepository studentRepository = new StudentRepository(context);
+            bool isadded = await studentRepository.AddDetails(st.Email, st.Password, st);
+            if (isadded)
+            {
+                return View("StudentHome");
+            }
+            else
+                return View("DetailsNotadded");
+        }
+
+
+        public async Task<ViewResult> updateDetails(string religion, string blood, string password, string gender, string name)
+        {
+            st.Email = HttpContext.Request.Cookies["email"];
+            st.Religion = religion;
+            st.BloodGroup = blood;
+            st.Name = name;
+            st.Password = password;
+            st.Gender = gender;
+            StudentRepository studentRepository = new StudentRepository(context);
+            bool isadded = await studentRepository.UpdateDetails(st.Email,st);
+            if (isadded)
+            {
+                return View("StudentHome");
+            }
+            else
+                return View("DetailsNotadded");
+        }
+    }
 }

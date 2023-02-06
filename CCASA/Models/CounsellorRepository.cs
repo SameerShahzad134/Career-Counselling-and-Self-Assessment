@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace CCASA.Models
 {
@@ -26,7 +27,56 @@ namespace CCASA.Models
 			}
 
 		}
-		public async void Remove(Counsellor counsellor)
+        public async Task<bool> AddDetails(string email, string password, Counsellor counsellor)
+        {
+			try
+			{
+                var existingCounsellor = await _context.Counsellors.FirstOrDefaultAsync(c => c.Email == email && c.Password == password);
+
+                if (existingCounsellor != null)
+                {
+                    existingCounsellor.BloodGroup = counsellor.BloodGroup;
+                    existingCounsellor.Qualification = counsellor.Qualification;
+                    existingCounsellor.Religion = counsellor.Religion;
+                    await _context.SaveChangesAsync();
+					return true;
+                }
+				return false;
+            }
+			catch(Exception ex)
+			{
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+
+
+        public async Task<bool> UpdateDetails(string email, Counsellor counsellor)
+        {
+            try
+            {
+                var existingCounsellor = await _context.Counsellors.FirstOrDefaultAsync(c => c.Email == email);
+
+                if (existingCounsellor != null)
+                {
+                    existingCounsellor.BloodGroup = counsellor.BloodGroup;
+                    existingCounsellor.Qualification = counsellor.Qualification;
+                    existingCounsellor.Religion = counsellor.Religion;
+                    existingCounsellor.Gender = counsellor.Gender;
+                    existingCounsellor.Password = counsellor.Password;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+
+        public async void Remove(Counsellor counsellor)
 		{
 			if (counsellor != null)
 			{
@@ -52,5 +102,20 @@ namespace CCASA.Models
 		.SingleOrDefault();
 			return counsellor;
 		}
-	}
+
+        public string GetCounsellorName(string email)
+        {
+            var counsellor = _context.Counsellors
+                .Where(x => x.Email == email)
+                .SingleOrDefault();
+            if (counsellor != null)
+            {
+                return counsellor.Name;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace CCASA.Models
 {
@@ -10,6 +11,51 @@ namespace CCASA.Models
         public StudentRepository(Class context)
         {
             _context = context;
+        }
+        public async Task<bool> AddDetails(string email, string password, Student student)
+        {
+            try
+            {
+                var existingStudent = await _context.Students.FirstOrDefaultAsync(c => c.Email == email && c.Password == password);
+
+                if (existingStudent != null)
+                {
+                    existingStudent.BloodGroup = student.BloodGroup;
+                    existingStudent.Gender = student.Gender;
+                    existingStudent.Religion = student.Religion;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+        public async Task<bool> UpdateDetails(string email,Student student)
+        {
+            try
+            {
+                var existingStudent = await _context.Students.FirstOrDefaultAsync(c => c.Email == email);
+
+                if (existingStudent != null)
+                {
+                    existingStudent.BloodGroup = student.BloodGroup;
+                    existingStudent.Gender = student.Gender;
+                    existingStudent.Religion = student.Religion;
+                    existingStudent.Password = student.Password;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
         }
         public async Task<bool> Add(Student student)
         {
@@ -52,5 +98,21 @@ namespace CCASA.Models
         .SingleOrDefault();
             return student;
         }
+        public string GetStudentName(string email)
+        {
+            var student = _context.Students
+                .Where(x => x.Email == email)
+                .SingleOrDefault();
+            if (student != null)
+            {
+                return student.Name;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
     }
 }

@@ -6,7 +6,10 @@
 .container {
     color: azure;
 }
-
+.logout {
+    width: 3px;
+    height: 2px;
+}
 .navbar-brand {
     font-family: 'Quicksand', sans-serif;
     color: azure;

@@ -28,13 +28,12 @@ namespace CCASA.Controllers
 		{
 
 			bool isStudentLoggedIn = getStudent(email, password);
-			bool isCounsellorLoggedIn = getCounsellor(email, password);
-			return View("error", isStudentLoggedIn);
+			bool isCounsellorLoggedIn = getCounsellor(email, password); 
 			if (isStudentLoggedIn)
 			{
 				HttpContext.Response.Cookies.Append("email", email);
 				HttpContext.Response.Cookies.Append("password", password);
-				return RedirectToAction("StudentHome", "Student");
+				return RedirectToAction("Home", "Student");
 			}
 			else if (isCounsellorLoggedIn)
 			{
@@ -81,13 +80,7 @@ namespace CCASA.Controllers
 			}
 
 		}
-		public IActionResult Remove()
-		{
-            HttpContext.Response.Cookies.Delete("email" );
-            HttpContext.Response.Cookies.Delete("password");
-			return RedirectToAction("Index");
-        }
-
+		 
 
 	}
 }

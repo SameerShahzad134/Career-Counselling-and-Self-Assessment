@@ -9,25 +9,25 @@
 	<div class="main">
 		<input type="checkbox" id="chk" aria-hidden="true"> 
 		<div class="signup">
-			<form>
+			<form action="/Counsellor/SignUp" method="post">
 				<label for="chk" aria-hidden="true">Sign up</label>
 				<input type="text" name="txt" placeholder="User name" required="">
 				<input type="email" name="email" placeholder="Email" required="">
 				<input type="password" name="pswd" placeholder="Password" required="">
 				<div class="center-div">
-					<a asp-controller="Home" asp-action="SignUp" class="signup-link">Sign Up</a>
+					<input type="submit" value="Submit">
 				</div>
 			</form>
 		</div>
 
 		<div class="login">
-			<form>
+			<form action="/Home/Login" method="post">
 				<label for="chk" aria-hidden="true">Login</label>
 				<input type="email" name="email" placeholder="Email" required="">
-				<input type="password" name="pswd" placeholder="Password" required="">
+				<input type="password" name="password" placeholder="Password" required="">
 				
 				<div class="center-div">
-					<a asp-controller="Home" asp-action="SignUp" class="signup-link">Login</a>
+					<input type="submit" value="Submit">
 				</div>
 			</form>
 		</div>
