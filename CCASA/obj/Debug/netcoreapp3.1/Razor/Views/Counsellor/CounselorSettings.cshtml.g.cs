@@ -13,13 +13,6 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\Views\_ViewImports.cshtml"
-using CCASA;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 1 "C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\Views\Counsellor\CounselorSettings.cshtml"
 using CCASA.Models;
 
@@ -27,7 +20,6 @@ using CCASA.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ca9df2ebe4c4f3e020ad16c838063b4efc9ed81c", @"/Views/Counsellor/CounselorSettings.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c56866baa549a491fbbb30f1a15273bceec80c3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Counsellor_CounselorSettings : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -58,7 +50,7 @@ using CCASA.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!doctype html>\r\n<html lang=\"en\">\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca9df2ebe4c4f3e020ad16c838063b4efc9ed81c3377", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca9df2ebe4c4f3e020ad16c838063b4efc9ed81c3044", async() => {
                 WriteLiteral(@"
     <meta charset=""utf-8"">
     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
@@ -79,7 +71,7 @@ using CCASA.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca9df2ebe4c4f3e020ad16c838063b4efc9ed81c4773", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca9df2ebe4c4f3e020ad16c838063b4efc9ed81c4440", async() => {
                 WriteLiteral(@"
     <div class=""container"">
         <div class=""row gutters"">

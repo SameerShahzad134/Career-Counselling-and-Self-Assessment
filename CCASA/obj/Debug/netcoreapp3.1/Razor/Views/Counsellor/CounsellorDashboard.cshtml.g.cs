@@ -12,22 +12,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
-#line 1 "C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\Views\_ViewImports.cshtml"
-using CCASA;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\Views\_ViewImports.cshtml"
-using CCASA.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7d2ae08e916f73f5630e8e2c822aa4f4e034dd36", @"/Views/Counsellor/CounsellorDashboard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c56866baa549a491fbbb30f1a15273bceec80c3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Counsellor_CounsellorDashboard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -61,7 +46,7 @@ using CCASA.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd364238", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd363729", async() => {
                 WriteLiteral(@"
     <meta charset=""UTF-8"" />
     <meta http-equiv=""X-UA-Compatible"" content=""IE=edge,chrome=1"">
@@ -72,7 +57,7 @@ using CCASA.Models;
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd365071", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd364562", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -99,7 +84,7 @@ using CCASA.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd366954", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d2ae08e916f73f5630e8e2c822aa4f4e034dd366445", async() => {
                 WriteLiteral(@"
 
     <header class=""ScriptHeader"">

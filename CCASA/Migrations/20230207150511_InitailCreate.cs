@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CCASA.Migrations
 {
-    public partial class initialCreate : Migration
+    public partial class InitailCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +13,10 @@ namespace CCASA.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
+                    CreatedBy = table.Column<string>(nullable: true),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedBy = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
@@ -19,7 +24,8 @@ namespace CCASA.Migrations
                     Gender = table.Column<string>(nullable: true),
                     Religion = table.Column<string>(nullable: true),
                     BloodGroup = table.Column<string>(nullable: true),
-                    Messege = table.Column<string>(nullable: true)
+                    Messege = table.Column<string>(nullable: true),
+                    ModifiedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()")
                 },
                 constraints: table =>
                 {
@@ -32,8 +38,13 @@ namespace CCASA.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
+                    CreatedBy = table.Column<string>(nullable: true),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedBy = table.Column<string>(nullable: true),
                     marks = table.Column<string>(nullable: true),
-                    time = table.Column<int>(nullable: false)
+                    time = table.Column<int>(nullable: false),
+                    ModifiedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()")
                 },
                 constraints: table =>
                 {
@@ -46,6 +57,10 @@ namespace CCASA.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
+                    CreatedBy = table.Column<string>(nullable: true),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedBy = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
@@ -55,7 +70,8 @@ namespace CCASA.Migrations
                     Gender = table.Column<string>(nullable: true),
                     Religion = table.Column<string>(nullable: true),
                     BloodGroup = table.Column<string>(nullable: true),
-                    Messege = table.Column<string>(nullable: true)
+                    Messege = table.Column<string>(nullable: true),
+                    ModifiedAt = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()")
                 },
                 constraints: table =>
                 {

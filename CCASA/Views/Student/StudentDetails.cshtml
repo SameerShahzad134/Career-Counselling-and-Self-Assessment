@@ -1,9 +1,13 @@
-﻿<head>
+﻿<!DOCTYPE html>
+<html>
+<head>
     <title>Personal Information Form</title>
+    <link rel="stylesheet" type="text/css" href="~/css/details.css">
 </head>
 <body>
     <h2>Personal Information Form</h2>
     <form action="/Student/addDetails" method="post">
+        <partial name="_PartialView"/>
         <div>
             <label for="religion">Religion:</label>
             <select id="religion" name="religion">
@@ -20,7 +24,7 @@
             <select id="gender" name="gender">
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
-                <option value="Female">Female</option> 
+                <option value="Female">Female</option>
                 <option value="Others">Others</option>
             </select>
         </div>
@@ -38,7 +42,8 @@
                 <option value="AB+">AB+</option>
                 <option value="AB-">AB-</option>
             </select>
-        </div> 
+        </div>
         <input type="submit" value="Submit">
     </form>
 </body>
+</html>

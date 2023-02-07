@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CCASA.Models
 {
-    public class Counsellor
+    public class Counsellor:AuditableEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

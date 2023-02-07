@@ -1,6 +1,6 @@
 ﻿namespace CCASA.Models
 {
-    public class Quiz
+    public class Quiz:AuditableEntity
     {
         public int Id { get; set; }
         public string marks { get; set; }

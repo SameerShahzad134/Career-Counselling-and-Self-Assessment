@@ -34,16 +34,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Dashboard">Dashboard</a>
+                        <input type="submit" value="DashBoard" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("DashBoard", "Counsellor")'" />
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Progress">Progress</a>
+                        <input type="submit" value="Progress" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Progress", "Counsellor")'" />
                     </li> 
                     <li>
-                        <a asp-action="Settings"><img class="setting" src="~/lib/settings.png" alt=""></a>
+                        <a><img class="setting" src="~/lib/settings.png" onclick="location.href='@Url.Action("Settings", "Counsellor")'" alt=""></a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Remove">Logout</a>
+                        <input type="submit" value="logout" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Remove", "Counsellor")'" />
                     </li> 
                 </ul>
             </div>

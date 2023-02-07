@@ -34,22 +34,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Quiz">Quiz</a>
+                        <input type="submit" value="Quiz" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Quiz", "Student")'" />
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Dashboard">Dashboard</a>
+                        <input type="submit" value="DashBoard" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("DashBoard", "Student")'" />
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Progress">Progress</a>
+                        <input type="submit" value="Progress" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Progress", "Student")'" />
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Counsellor">Counsellor</a>
+                        <input type="submit" value="Counsellor" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Counsellor", "Student")'" />
                     </li>
                     <li>
-                        <a asp-action="Settings"><img class="setting" src="~/lib/settings.png" alt=""></a>
+                        <a><img class="setting" src="~/lib/settings.png" onclick="location.href='@Url.Action("Settings", "Student")'" alt=""></a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="Remove">Logout</a>
+                        <input type="submit" value="logout" class="btn btn-primary nav-link" style="background-color: rgb(23, 23, 54);" onclick="location.href='@Url.Action("Remove", "Student")'" />
                     </li>
 
                 </ul>

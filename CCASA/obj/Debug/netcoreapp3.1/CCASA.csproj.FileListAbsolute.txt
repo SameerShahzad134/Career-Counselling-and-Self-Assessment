@@ -85,8 +85,8 @@ C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\V
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounselorSettings.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\StudentSettings.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialView.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounsellorDetails.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\DetailsNotadded.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\DetailsNotadded.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\StudentDetails.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialView.cshtml.g.cs
