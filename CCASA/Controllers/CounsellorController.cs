@@ -1,5 +1,9 @@
 ﻿using CCASA.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace CCASA.Controllers
@@ -8,6 +12,14 @@ namespace CCASA.Controllers
     {
         Class context = new Class();
         Counsellor st = new Counsellor();
+        private readonly IWebHostEnvironment Environment;
+
+        public CounsellorController(IWebHostEnvironment
+            environment)
+        {
+
+            Environment = environment;
+        }
         public ViewResult Index()
         {
             return View("LoginSignUp");
@@ -75,7 +87,10 @@ namespace CCASA.Controllers
             else
                 return View("DetailsNotadded");
         }
-
+        public ViewResult Upload()
+        {
+            return View("CounsellorUpload");
+        }
 
         public async Task<ViewResult> updateDetails(string religion, string blood, string password, string gender,string name)
         {
@@ -93,6 +108,30 @@ namespace CCASA.Controllers
             }
             else
                 return View("DetailsNotadded");
+        }
+        [HttpPost]
+        public IActionResult UploadFile(List<IFormFile> postedFiles)
+        {
+            string wwwPath = this.Environment.WebRootPath;
+            string path = Path.Combine(wwwPath, "Documents");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            foreach (var file in postedFiles)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var pathWithFileName = Path.Combine(path, fileName);
+                using (FileStream stream = new
+                    FileStream(pathWithFileName,
+                    FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                    ViewBag.Message = "file uploaded successfully";
+                }
+            }
+            return View("done");
         }
     }
 }

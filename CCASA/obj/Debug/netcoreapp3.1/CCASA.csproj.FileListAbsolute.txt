@@ -90,3 +90,5 @@ C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\V
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\DetailsNotadded.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Student\StudentDetails.cshtml.g.cs
 C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialView.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\CounsellorUpload.cshtml.g.cs
+C:\Users\Sameer Shahzad\source\repos\CCASA\CCASA\obj\Debug\netcoreapp3.1\Razor\Views\Counsellor\done.cshtml.g.cs
