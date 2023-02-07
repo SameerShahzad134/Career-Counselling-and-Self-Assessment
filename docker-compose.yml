@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ccasa:
+    image: ${DOCKER_REGISTRY-}ccasa
+    build:
+      context: .
+      dockerfile: CCASA\Dockerfile

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "m15LPt8q7qs2VeCTMna8N4vmD9Ysgh9ma3UMLHCZhKftO+Q4FgTRzlEiI45dJQHcgsyEBHUOEONQ55Lo8WyjGA==",
+  "dgSpecHash": "6MHkMRMfYUKy2tf8reKMBN2zzmVEaHawNRa23eHDZRq5tFLOOIFLZsdU9t12HJ8+AGQqchIcvFfFANBNrpFKkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sameer Shahzad\\source\\repos\\CCASA\\CCASA\\CCASA.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.5.0\\microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Sameer Shahzad\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
